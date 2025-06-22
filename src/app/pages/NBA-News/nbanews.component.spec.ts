@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NbaTalk } from './nba-talk';
+import { NBANewsComponent } from './nbanews.component';
 
-describe('NbaTalk', () => {
-  let component: NbaTalk;
-  let fixture: ComponentFixture<NbaTalk>;
+describe('Home', () => {
+  let component: NBANewsComponent;
+  let fixture: ComponentFixture<NBANewsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NbaTalk]
+      imports: [NBANewsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NbaTalk);
+    fixture = TestBed.createComponent(NBANewsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nbapia-fe": {
+    "NBApia": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular/build:application",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -20,8 +20,11 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/tailwind.css"
+              "src/styles.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src"]
+            },
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -56,10 +59,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "nbapia-fe:build:production"
+              "buildTarget": "NBApia:build:production"
             },
             "development": {
-              "buildTarget": "nbapia-fe:build:development"
+              "buildTarget": "NBApia:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +79,7 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/tailwind.css"
+              "src/styles.css"
             ]
           }
         }
@@ -84,6 +87,6 @@
     }
   },
   "cli": {
-    "analytics": "fbf52829-eb02-4cc3-802e-c382403b9b78"
+    "analytics": "d12a2298-8308-4009-b2da-05319edd01b3"
   }
 }
