@@ -1,0 +1,61 @@
+<header class="bg-white shadow-md">
+  <nav class="bg-white shadow p-4 flex justify-between items-center max-w-7xl mx-auto">
+    <a routerLink="/" class="flex items-center gap-3">
+      <img src="assets/NBApia.svg" alt="NBApia" class="w-14 h-14" />
+      <h2 class="text-xl font-bold text-blue-600">NBApia</h2>
+    </a>
+    <ul class="flex justify-center bg-gray-100 rounded-md overflow-hidden shadow text-sm font-semibold text-gray-600">
+      <li class="flex-2">
+        <a routerLink="/nba-news" class="block text-center px-6 py-3 hover:bg-blue-100 transition">NBA 뉴스 & 번역</a>
+      </li>
+      <li class="flex-2">
+        <a routerLink="/nba-analysis" class="block text-center px-6 py-3 hover:bg-blue-100 transition">NBA 분석</a>
+      </li>
+      <li class="flex-2">
+        <a routerLink="/nba-free" class="block text-center px-6 py-3 hover:bg-blue-100 transition">NBA 자유</a>
+      </li>
+      <li class="flex-2">
+        <a routerLink="/daily-humor" class="block text-center px-6 py-3 hover:bg-blue-100 transition">일상 & 유머</a>
+      </li>
+      <li class="flex-2">
+        <a routerLink="/short-form" class="block text-center px-6 py-3 hover:bg-blue-100 transition">쇼츠 & 링크</a>
+      </li>
+      <li class="flex-2">
+        <a routerLink="/notification" class="block text-center px-6 py-3 hover:bg-blue-100 transition">공지</a>
+      </li>
+    </ul>
+
+    <div class="flex items-center space-x-3">
+        <a routerLink="/login" class="px-4 py-2 text-sm font-medium border border-blue-500 text-blue-500 rounded hover:bg-blue-50 transition">Login</a>
+        <a routerLink="/signup" class="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded hover:bg-blue-600 transition">Sign up</a>
+    </div>
+
+    <div class="relative">
+        <button (click)="toggleMenu()" class="p-2 hover:bg-gray-100 rounded-full">⚙️</button>
+
+        <div *ngIf="showMenu" class="absolute right-0 mt-2 w-40 bg-white shadow-md rounded border z-50">
+            <ul class="py-1 text-sm text-gray-700">
+                <li><a routerLink="/profile" class="block px-4 py-2 hover:bg-gray-100">👑ADMIN PAGE👑</a></li>
+                <li><a routerLink="/admin" class="block px-4 py-2 hover:bg-gray-100">Favorites</a></li>
+                <li><a routerLink="/admin" class="block px-4 py-2 hover:bg-gray-100">FAQs</a></li>
+                <li>
+                    <div class="flex items-center justify-between px-4 py-2">
+                        <span class="text-sm text-gray-700">Dark Mode</span>
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input
+                              type="checkbox"
+                              class="sr-only"
+                              [checked]="darkModeEnabled"
+                              (change)="onDarkModeChange($event)"
+                            />
+                            <div class="w-10 h-5 bg-gray-300 rounded-full peer peer-checked:bg-blue-600 transition relative">
+                            <div class="w-4 h-4 bg-white rounded-full shadow absolute top-0.5 left-0.5 peer-checked:translate-x-5 transition"></div>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+</header>

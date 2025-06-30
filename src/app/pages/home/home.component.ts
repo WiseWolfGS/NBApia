@@ -1,0 +1,123 @@
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+@Component({
+  selector: 'app-home',
+  imports: [CommonModule, RouterModule],
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class HomeComponent {
+  popularPosts = [
+    {
+      id: 123,
+      title: '오늘 할리버튼 활약.jpg',
+      author: '할리버튼입니다',
+      category: 'NBA 자유',
+      time: '1시간 전',
+      likes: 23,
+      comments: 34,
+    },
+    {
+      id: 124,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 125,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 126,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 127,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 128,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 129,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 130,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 131,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 132,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 133,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+    {
+      id: 134,
+      title: '더미 제목',
+      author: '사용자이름',
+      category: 'NBA 자유',
+      time: '3시간 전',
+      likes: 12,
+      comments: 18,
+    },
+  ];
+}
