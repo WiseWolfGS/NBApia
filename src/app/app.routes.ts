@@ -6,6 +6,7 @@ import { NBAFreeComponent } from './pages/nba-free/nba-free.component';
 import { NBAAnalysisComponent } from './pages/nba-analysis/nba-analysis.component';
 import { DailyHumorComponent } from './pages/daily-humor/daily-humor.component';
 import { NotificationComponent } from './pages/notification/notification.component';
+import { PostEditorComponent } from './pages/post-editor/posteditor.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,10 @@ export const routes: Routes = [
             {
                 path: 'notification',
                 component: NotificationComponent,
+            },
+            {
+                path: 'posteditor',
+                component: PostEditorComponent
             },
             {
             path: 'post/:id',

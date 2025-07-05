@@ -1,1 +1,40 @@
-<p>nba-free works!</p>
+<div class="w-full bg-white rounded-xl shadow p-4">
+    <h2 class="text-xl font-bold mb-3">NBA 자유 게시판</h2>
+
+    <div class="flex items-center justify-between p-2 rounded">
+        <div class="flex items-center space-x-2">
+            <span style="margin-left: 15px; margin-right: 25px;">🏷</span>
+            <span style="margin-right: 10rem;">👍</span>
+            <span class="text-sm font-semibold">제목</span>
+        </div>
+    </div>
+
+    <a 
+    *ngFor="let post of nbafreePosts" 
+    class="block" 
+    [routerLink]="['/post', post.id]"
+    >
+        <div class="flex items-center justify-between p-2 rounded hover:bg-gray-100 cursor-pointer">
+            <div class="flex items-center space-x-2">
+                <div>
+                    <img src="assets/Denver_Nuggets_Logo.svg" alt="DEN" width="20px" height="20px">
+                </div>
+                <div>
+                    <img src="assets/Cleveland_Cavaliers_Logo.svg" alt="CLV" width="20px" height="20px">
+                </div>
+                <span class="text-sm font-bold text-yellow-600" style="margin-left: 25px; margin-right: 10rem;">{{ post.likes }}</span>
+                <div>
+                    <span class="text-sm font-semibold">{{ post.title }}</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span class="text-xs text-gray-500 font-bold">{{ post.author }} / {{ post.time }}</span>
+                </div>
+                <div>
+                    <span class="text-xs text-gray-400">👁 {{ post.viewer }} / 💬 {{ post.comments }}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
